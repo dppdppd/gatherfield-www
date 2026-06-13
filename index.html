@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gatherfield - Visual workspace for plaintext notes</title>
+    <meta
+      name="description"
+      content="Gatherfield is a visual workspace for plaintext notes, connected ideas, sources, branching versions, and read-through drafts. Keep separate thoughts visible while the map stays tied to text."
+    />
+    <meta name="theme-color" content="#f3eadb" />
+    <link rel="canonical" href="https://gatherfield.app/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://gatherfield.app/" />
+    <meta property="og:site_name" content="Gatherfield" />
+    <meta property="og:title" content="Gatherfield - Visual workspace for plaintext notes" />
+    <meta property="og:description" content="Keep separate thoughts visible, connect ideas in plaintext, and switch named versions that redraw the graph." />
+    <meta property="og:image" content="https://gatherfield.app/gatherfield-og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Gatherfield homepage showing in-context note editing and a visual plaintext workspace." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Gatherfield - Visual workspace for plaintext notes" />
+    <meta name="twitter:description" content="Keep separate thoughts visible, connect ideas in plaintext, and switch named versions that redraw the graph." />
+    <meta name="twitter:image" content="https://gatherfield.app/gatherfield-og-image.png" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2712%27 fill=%27%231f221d%27/%3E%3Ctext x=%2732%27 y=%2744%27 text-anchor=%27middle%27 font-family=%27Arial, sans-serif%27 font-size=%2738%27 font-weight=%27700%27 fill=%27%23fff7e8%27%3EG%3C/text%3E%3C/svg%3E" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Gatherfield home">
+        <span class="brand-mark">G</span>
+        <span>Gatherfield</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#story">Overview</a>
+        <a href="#plain-text">Plaintext</a>
+        <a href="#versions">Versions</a>
+        <a href="#galley">Galley</a>
+        <a href="#history">History</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero hero-linear">
+        <div class="hero-nodegraph" aria-hidden="true">
+          <pre class="hero-nodegraph-frame" data-gatherfield-tumble-graph></pre>
+        </div>
+        <div class="hero-copy">
+          <p class="eyebrow">Spatial plaintext authoring</p>
+          <h1>Gatherfield</h1>
+          <p class="hero-lede">
+            Gatherfield turns linked plaintext into a workspace you can move through. Write with Markdown where it helps, keep connected notes in view, assemble read-through drafts, and let each version of the work redraw the graph from the text itself.
+          </p>
+          <div class="hero-actions" aria-label="Homepage actions">
+            <a class="button primary" href="#story">Watch the workspace grow</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="story" class="storyline" aria-labelledby="story-title">
+        <div class="story-intro">
+          <p class="eyebrow">Connected plaintext</p>
+          <h2 id="story-title">Start with one note.</h2>
+          <p>
+            Six short proofs show how Gatherfield keeps plaintext, panes, graph, sources, versions, Galley, and history moving together.
+          </p>
+        </div>
+
+        <article id="story-01" class="story-step">
+          <div class="story-copy">
+            <p class="story-index">01 / In-context note editing</p>
+            <h2>Write beside the map, not away from it.</h2>
+            <p>
+              Create a note, add a link, and the next editing pane opens in context while the active node follows the place you are writing.
+            </p>
+          </div>
+          <figure class="story-media" aria-label="Gatherfield in-context note editing video">
+            <div class="video-frame is-ready">
+              <video
+                poster="./assets/posters/2026-06-06-pane-travel-follow-links-without-losing-place-poster.png?v=20260606-latest-c421344"
+                muted
+                loop
+                playsinline
+                controls
+                preload="metadata"
+              >
+                <source src="./assets/videos/2026-06-06-pane-travel-follow-links-without-losing-place.mp4?v=20260606-latest-c421344" type="video/mp4" />
+                <source src="./assets/videos/2026-06-06-pane-travel-follow-links-without-losing-place.webm?v=20260606-latest-c421344" type="video/webm" />
+                Your browser cannot play this Gatherfield walkthrough video. Download the MP4 from
+                <a href="./assets/videos/2026-06-06-pane-travel-follow-links-without-losing-place.mp4?v=20260606-latest-c421344">this link</a>.
+              </video>
+            </div>
+            <figcaption>30s: links open the next note while the map stays in context.</figcaption>
+          </figure>
+        </article>
+
+        <article id="plain-text" class="story-step">
+          <div class="story-copy">
+            <p class="story-index">02 / Plaintext planning</p>
+            <h2>Plaintext links plan the map.</h2>
+            <p>
+              Write links in one plaintext note. Gatherfield draws each target into the map, including notes that have not been opened or written yet.
+            </p>
+          </div>
+          <figure class="story-media" aria-label="Gatherfield plaintext links plan the map video">
+            <div class="video-frame is-ready">
+              <video
+                poster="./assets/posters/2026-06-09-plaintext-links-plan-the-map-poster.png?v=20260609-smooth-video2"
+                muted
+                loop
+                playsinline
+                controls
+                preload="metadata"
+              >
+                <source src="./assets/videos/2026-06-09-plaintext-links-plan-the-map.mp4?v=20260609-smooth-video2" type="video/mp4" />
+                <source src="./assets/videos/2026-06-09-plaintext-links-plan-the-map.webm?v=20260609-smooth-video2" type="video/webm" />
+                Your browser cannot play this Gatherfield walkthrough video. Download the MP4 from
+                <a href="./assets/videos/2026-06-09-plaintext-links-plan-the-map.mp4?v=20260609-smooth-video2">this link</a>.
+              </video>
+            </div>
+            <figcaption>13s: plaintext links draw the map, including unwritten notes.</figcaption>
+          </figure>
+        </article>
+
+        <article id="versions" class="story-step">
+          <div class="story-copy">
+            <p class="story-index">03 / Versioned maps</p>
+            <h2>Work on multiple versions of the same note.</h2>
+            <p>
+              Save alternate versions of a note, including the links inside it, and switch between them while each version keeps its own history. The graph updates to match the version you are working on.
+            </p>
+          </div>
+          <figure class="story-media" aria-label="Gatherfield plaintext versions change map video">
+            <div class="video-frame is-ready">
+              <video
+                poster="./assets/posters/2026-06-06-plaintext-versions-change-map-poster.png?v=20260606-latest-c421344"
+                muted
+                loop
+                playsinline
+                controls
+                preload="metadata"
+              >
+                <source src="./assets/videos/2026-06-06-plaintext-versions-change-map.mp4?v=20260606-latest-c421344" type="video/mp4" />
+                <source src="./assets/videos/2026-06-06-plaintext-versions-change-map.webm?v=20260606-latest-c421344" type="video/webm" />
+                Your browser cannot play this Gatherfield walkthrough video. Download the MP4 from
+                <a href="./assets/videos/2026-06-06-plaintext-versions-change-map.mp4?v=20260606-latest-c421344">this link</a>.
+              </video>
+            </div>
+            <figcaption>11s: switching versions redraws the graph.</figcaption>
+          </figure>
+        </article>
+
+        <article id="story-05" class="story-step">
+          <div class="story-copy">
+            <p class="story-index">04 / Source references</p>
+            <h2>Keep sources close and the map clean.</h2>
+            <p>
+              Citations and source notes stay attached in references while conceptual links define the graph.
+            </p>
+          </div>
+          <figure class="story-media" aria-label="Gatherfield research sources video">
+            <div class="video-frame is-ready">
+              <video
+                poster="./assets/posters/2026-06-06-research-out-of-concept-map-poster.png?v=20260606-latest-c421344"
+                muted
+                loop
+                playsinline
+                controls
+                preload="metadata"
+              >
+                <source src="./assets/videos/2026-06-06-research-out-of-concept-map.mp4?v=20260606-latest-c421344" type="video/mp4" />
+                <source src="./assets/videos/2026-06-06-research-out-of-concept-map.webm?v=20260606-latest-c421344" type="video/webm" />
+                Your browser cannot play this Gatherfield walkthrough video. Download the MP4 from
+                <a href="./assets/videos/2026-06-06-research-out-of-concept-map.mp4?v=20260606-latest-c421344">this link</a>.
+              </video>
+            </div>
+            <figcaption>11s: sources stay close without crowding the concept map.</figcaption>
+          </figure>
+        </article>
+
+        <article id="galley" class="story-step">
+          <div class="story-copy">
+            <p class="story-index">05 / Galley read-through</p>
+            <h2>Assemble connected notes into a read-through draft.</h2>
+            <p>
+              Mark structural links as inclusions. Galley follows those plaintext links in order and collates the linked notes into one readable draft view.
+            </p>
+          </div>
+          <figure class="story-media" aria-label="Gatherfield Galley read-through video">
+            <div class="video-frame is-ready">
+              <video
+                poster="./assets/posters/2026-06-07-galley-read-through-from-linked-notes-poster.png?v=20260607-galley-e204ce2"
+                muted
+                loop
+                playsinline
+                controls
+                preload="metadata"
+              >
+                <source src="./assets/videos/2026-06-07-galley-read-through-from-linked-notes.mp4?v=20260607-galley-e204ce2" type="video/mp4" />
+                <source src="./assets/videos/2026-06-07-galley-read-through-from-linked-notes.webm?v=20260607-galley-e204ce2" type="video/webm" />
+                Your browser cannot play this Gatherfield walkthrough video. Download the MP4 from
+                <a href="./assets/videos/2026-06-07-galley-read-through-from-linked-notes.mp4?v=20260607-galley-e204ce2">this link</a>.
+              </video>
+            </div>
+            <figcaption>8s: inclusion links assemble connected notes into one draft view.</figcaption>
+          </figure>
+        </article>
+
+        <article id="history" class="story-step story-step-final">
+          <div class="story-copy">
+            <p class="story-index">06 / Plain files and history</p>
+            <h2>Recover drafts without hiding the plaintext.</h2>
+            <p>
+              Saved revisions and recovery history stay nearby while the main note remains an inspectable plaintext file.
+            </p>
+          </div>
+          <figure class="story-media" aria-label="Gatherfield recoverable history video">
+            <div class="video-frame is-ready">
+              <video
+                poster="./assets/posters/2026-06-06-local-files-recoverable-history-poster.png?v=20260606-latest-c421344"
+                muted
+                loop
+                playsinline
+                controls
+                preload="metadata"
+              >
+                <source src="./assets/videos/2026-06-06-local-files-recoverable-history.mp4?v=20260606-latest-c421344" type="video/mp4" />
+                <source src="./assets/videos/2026-06-06-local-files-recoverable-history.webm?v=20260606-latest-c421344" type="video/webm" />
+                Your browser cannot play this Gatherfield walkthrough video. Download the MP4 from
+                <a href="./assets/videos/2026-06-06-local-files-recoverable-history.mp4?v=20260606-latest-c421344">this link</a>.
+              </video>
+            </div>
+            <figcaption>21s: history is recoverable while the note stays plaintext.</figcaption>
+          </figure>
+        </article>
+      </section>
+
+      <section class="supporting-features" aria-labelledby="supporting-title">
+        <div class="supporting-copy">
+          <p class="eyebrow">Built for serious work</p>
+          <h2 id="supporting-title">The main proofs stay short. The workspace still goes deep.</h2>
+          <p>
+            These capabilities support the six core workflows without needing their own homepage video.
+          </p>
+        </div>
+        <div class="supporting-grid">
+          <article>
+            <span>Map views</span>
+            <h3>Save useful graph scopes.</h3>
+            <p>Start local, widen deliberately, and keep the map view that helps the project make sense.</p>
+          </article>
+          <article>
+            <span>Shared context</span>
+            <h3>Surfaces stay coordinated.</h3>
+            <p>The editor, graph, tree, and references point at the same active note instead of becoming separate places to reconcile.</p>
+          </article>
+          <article>
+            <span>Dockable panes</span>
+            <h3>Arrange the workspace around the task.</h3>
+            <p>Move writing, graph, files, and references into the layout a project needs.</p>
+          </article>
+          <article>
+            <span>Optional metadata</span>
+            <h3>Style the map only when it helps.</h3>
+            <p>Plaintext remains the body. Frontmatter can add graph presentation details for notes that need them.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>Gatherfield</span>
+      <span>Visual plaintext for connected thinking</span>
+    </footer>
+
+    <script src="./script.js?v=20260605-tumble-graph-title-thick"></script>
+  </body>
+</html>
