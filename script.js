@@ -83,7 +83,9 @@ function initGatherfieldTumbleGraph() {
   const width = config.unicodeColumns * config.brailleColumns;
   const height = config.unicodeRows * config.brailleRows;
   const yProjectionScale = 0.13;
-  const brailleAdvanceEm = 0.732;
+  // Match the CSS scaleX used for braille cells so the generated graph keeps
+  // its intended proportions after the visual advance is tightened.
+  const brailleAdvanceEm = 0.66;
   const brailleLetterSpacingEm = 0;
   const renderedCellWidthEm = brailleAdvanceEm + brailleLetterSpacingEm;
   const xProjectionScale =
