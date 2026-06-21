@@ -101,14 +101,9 @@ footer,
   text-transform: uppercase;
 }
 
-.brand-mark {
-  align-items: center;
-  background: var(--ink);
-  border-radius: 4px;
-  color: var(--paper);
-  display: inline-flex;
+.brand-emblem {
+  display: block;
   height: 30px;
-  justify-content: center;
   width: 30px;
 }
 
@@ -181,13 +176,13 @@ h1 {
 .hero-wordmark-heading {
   line-height: 1;
   margin-bottom: 30px;
-  max-width: min(623px, 69.9vw);
+  max-width: min(935px, 92vw);
 }
 
 .hero-wordmark {
   display: block;
   height: auto;
-  max-height: 113px;
+  max-height: 170px;
   width: 100%;
 }
 
@@ -1203,11 +1198,11 @@ footer {
   }
 
   .hero-wordmark-heading {
-    max-width: min(471px, 71.4vw);
+    max-width: min(707px, 92vw);
   }
 
   .hero-wordmark {
-    max-height: 79px;
+    max-height: 119px;
   }
 
   .hero-linear .hero-lede {
