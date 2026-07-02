@@ -1500,3 +1500,127 @@ footer {
     font-size: 25px;
   }
 }
+
+/* Download / beta section (download-and-instructions 2026-07-02): the page's
+   closing call-to-action. Same warm paper + grid texture family as
+   .supporting-features, with the app's teal accent on the one button that
+   matters. */
+.download {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 88px 24px 96px;
+  text-align: center;
+}
+
+.download .eyebrow {
+  color: rgba(255, 254, 251, 0.62);
+}
+
+.download-copy {
+  margin: 0 auto 30px;
+  max-width: 720px;
+}
+
+.download-copy h2 {
+  color: var(--paper);
+  font-size: 46px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1;
+  margin: 0 0 16px;
+}
+
+.download-copy p:not(.eyebrow) {
+  color: rgba(255, 254, 251, 0.78);
+  font-size: 19px;
+  line-height: 1.45;
+  margin: 0 auto;
+  max-width: 620px;
+}
+
+.download-button {
+  background: var(--route);
+  border-radius: 10px;
+  color: var(--paper);
+  display: inline-block;
+  font-size: 19px;
+  font-weight: 600;
+  padding: 16px 34px;
+  text-decoration: none;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+.download-button:hover {
+  box-shadow: 0 10px 30px rgba(12, 107, 91, 0.45);
+  transform: translateY(-1px);
+}
+
+.download-meta {
+  color: rgba(255, 254, 251, 0.6);
+  font-family: var(--mono);
+  font-size: 12px;
+  margin: 14px 0 0;
+}
+
+.download-meta a {
+  color: rgba(255, 254, 251, 0.78);
+}
+
+.download-steps {
+  color: rgba(255, 254, 251, 0.82);
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  list-style: none;
+  counter-reset: dl-step;
+  margin: 44px auto 0;
+  max-width: 1020px;
+  padding: 0;
+  text-align: left;
+}
+
+.download-steps li {
+  background: rgba(255, 254, 251, 0.06);
+  border: 1px solid rgba(255, 254, 251, 0.14);
+  border-radius: 8px;
+  counter-increment: dl-step;
+  font-size: 15px;
+  line-height: 1.5;
+  padding: 18px 20px 18px 52px;
+  position: relative;
+}
+
+.download-steps li::before {
+  color: rgba(255, 254, 251, 0.5);
+  content: counter(dl-step);
+  font-family: var(--mono);
+  font-size: 22px;
+  font-weight: 800;
+  left: 20px;
+  position: absolute;
+  top: 14px;
+}
+
+.download-steps strong {
+  color: var(--paper);
+}
+
+.download-note {
+  color: rgba(255, 254, 251, 0.6);
+  font-size: 14px;
+  margin: 30px 0 0;
+}
+
+.download-note a {
+  color: rgba(255, 254, 251, 0.78);
+}
+
+@media (max-width: 900px) {
+  .download-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .download-copy h2 {
+    font-size: 34px;
+  }
+}

@@ -23,7 +23,7 @@
     <meta name="twitter:title" content="Gatherfield - Visual workspace for connected notes" />
     <meta name="twitter:description" content="Keep notes, drafts, sources, and outlines tied to a visual map that comes from plain text." />
     <meta name="twitter:image" content="https://gatherfield.app/gatherfield-og-image.png" />
-    <link rel="stylesheet" href="./styles.css?v=20260625-chaptered-layout" />
+    <link rel="stylesheet" href="./styles.css?v=20260702-download-section" />
     <link rel="icon" href="./assets/brand/gatherfield-icon-inverted.svg?v=20260617-icon-dark-zoomout20-centered" />
   </head>
   <body>
@@ -40,6 +40,7 @@
         <a href="#annotations">Annotations</a>
         <a href="#draft">Read-through</a>
         <a href="#sources">Sources</a>
+        <a class="nav-download" href="#download">Download</a>
       </nav>
     </header>
 
@@ -262,6 +263,32 @@
             <p>Promote a passage into its own note, or fold a linked note back inline &mdash; without rebuilding the map.</p>
           </article>
         </div>
+      </section>
+
+      <section class="download" id="download" aria-labelledby="download-title">
+        <div class="download-copy">
+          <p class="eyebrow">Beta</p>
+          <h2 id="download-title">Take Gatherfield for a spin.</h2>
+          <p>
+            The desktop app is one portable file &mdash; no installer, no account. Your notes are ordinary Markdown files in a folder you choose, and they stay yours.
+          </p>
+        </div>
+        <div class="download-actions">
+          <a
+            class="download-button"
+            href="https://github.com/dppdppd/gatherfield/releases/download/v1.93.1-beta/gatherfield-1.93.1-beta-windows-x86_64.exe"
+          >Download for Windows</a>
+          <p class="download-meta">
+            v1.93.1-beta &middot; portable x64 .exe &middot; ~15&nbsp;MB &middot;
+            <a href="https://github.com/dppdppd/gatherfield/releases">all releases &amp; checksums</a>
+          </p>
+        </div>
+        <ol class="download-steps">
+          <li><strong>Download and run.</strong> It is a portable app &mdash; no install step; keep it anywhere.</li>
+          <li><strong>If Windows SmartScreen appears,</strong> choose &ldquo;More info&rdquo; &rarr; &ldquo;Run anyway&rdquo;. Beta builds are not code-signed yet; you can verify the file against the release&rsquo;s SHA256SUMS.</li>
+          <li><strong>Open a folder.</strong> Point Gatherfield at any folder of Markdown notes &mdash; or an empty one &mdash; and start linking.</li>
+        </ol>
+        <p class="download-note">Linux and macOS builds are on the way &mdash; watch the <a href="https://github.com/dppdppd/gatherfield/releases">releases page</a>.</p>
       </section>
     </main>
 
