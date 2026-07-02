@@ -23,7 +23,7 @@
     <meta name="twitter:title" content="Gatherfield - Visual workspace for connected notes" />
     <meta name="twitter:description" content="Keep notes, drafts, sources, and outlines tied to a visual map that comes from plain text." />
     <meta name="twitter:image" content="https://gatherfield.app/gatherfield-og-image.png" />
-    <link rel="stylesheet" href="./styles.css?v=20260618-wordmark-150" />
+    <link rel="stylesheet" href="./styles.css?v=20260625-chaptered-layout" />
     <link rel="icon" href="./assets/brand/gatherfield-icon-inverted.svg?v=20260617-icon-dark-zoomout20-centered" />
   </head>
   <body>
@@ -35,7 +35,6 @@
       <nav aria-label="Primary navigation">
         <a href="#story">Overview</a>
         <a href="#plain-text">Map</a>
-        <a href="#board">Arrange</a>
         <a href="#versions">Drafts</a>
         <a href="#history">History</a>
         <a href="#annotations">Annotations</a>
@@ -70,9 +69,11 @@
           </p>
         </div>
 
-        <article id="plain-text" class="story-step">
+        <div class="chapter-head"><span>Build the map</span></div>
+
+        <article id="plain-text" class="story-step story-feature">
           <div class="story-copy">
-            <p class="story-index">01 / Note links</p>
+            <p class="story-index">01 / The map is the editor</p>
             <h2>Your links become a visual map.</h2>
             <p>
               Start with an empty map, create the first note, then link another. Gatherfield opens it beside the original and grows the map from the links in your text.
@@ -81,82 +82,56 @@
           <figure class="story-media" aria-label="Gatherfield first-class graph video">
             <div class="video-frame is-ready">
               <video
-                poster="./assets/posters/2026-06-20-first-class-graph-poster.png?v=20260620-build-1.92.7-1280-12pt-r1"
+                poster="./assets/posters/2026-07-01-first-class-graph-poster.png?v=20260701-build-1.93.1-1280-12pt-r4"
                 muted
                 loop
                 playsinline
                 controls
                 preload="metadata"
               >
-                <source src="./assets/videos/2026-06-20-first-class-graph.mp4?v=20260620-build-1.92.7-1280-12pt-r1" type="video/mp4" />
-                <source src="./assets/videos/2026-06-20-first-class-graph.webm?v=20260620-build-1.92.7-1280-12pt-r1" type="video/webm" />
+                <source src="./assets/videos/2026-07-01-first-class-graph.mp4?v=20260701-build-1.93.1-1280-12pt-r4" type="video/mp4" />
+                <source src="./assets/videos/2026-07-01-first-class-graph.webm?v=20260701-build-1.93.1-1280-12pt-r4" type="video/webm" />
                 Your browser cannot play this Gatherfield walkthrough video. Download the MP4 from
-                <a href="./assets/videos/2026-06-20-first-class-graph.mp4?v=20260620-build-1.92.7-1280-12pt-r1">this link</a>.
+                <a href="./assets/videos/2026-07-01-first-class-graph.mp4?v=20260701-build-1.93.1-1280-12pt-r4">this link</a>.
               </video>
             </div>
             <figcaption>Create the first note from the map, then add a note link; the map grows and the next page opens without losing your place.</figcaption>
           </figure>
         </article>
 
-        <article id="board" class="story-step">
-          <div class="story-copy">
-            <p class="story-index">02 / Arranged map</p>
-            <h2>Take over when auto layout is not what you meant.</h2>
-            <p>
-              Auto layout shows what is connected. Manual layout lets you drag notes into a readable order, then keep that arrangement with the note.
-            </p>
-          </div>
-          <figure class="story-media" aria-label="Gatherfield manual board arrangement video">
-            <div class="video-frame is-ready">
-              <video
-                poster="./assets/posters/2026-06-20-manual-board-arrangement-poster.png?v=20260620-build-1.93.0-1280-12pt-r1"
-                muted
-                loop
-                playsinline
-                controls
-                preload="metadata"
-              >
-                <source src="./assets/videos/2026-06-20-manual-board-arrangement.mp4?v=20260620-build-1.93.0-1280-12pt-r1" type="video/mp4" />
-                <source src="./assets/videos/2026-06-20-manual-board-arrangement.webm?v=20260620-build-1.93.0-1280-12pt-r1" type="video/webm" />
-                Your browser cannot play this Gatherfield walkthrough video. Download the MP4 from
-                <a href="./assets/videos/2026-06-20-manual-board-arrangement.mp4?v=20260620-build-1.93.0-1280-12pt-r1">this link</a>.
-              </video>
-            </div>
-            <figcaption>Turn the automatic map into an arranged board that reopens with the note.</figcaption>
-          </figure>
-        </article>
+        <div class="chapter-head"><span>Work in drafts</span></div>
 
-        <article id="versions" class="story-step">
+        <article id="versions" class="story-step story-split media-right">
           <div class="story-copy">
-            <p class="story-index">03 / Alternate drafts</p>
+            <p class="story-index">02 / Alternate drafts</p>
             <h2>Experiment with drafts and the paths they create.</h2>
             <p>
-              Save alternate versions when an idea branches. Switch drafts and the map follows the links in the version you chose.
+              Keep alternate versions when an idea branches. Switch drafts and the map follows the links in the version you chose.
             </p>
           </div>
           <figure class="story-media" aria-label="Gatherfield alternate drafts redraw the map video">
             <div class="video-frame is-ready">
               <video
-                poster="./assets/posters/2026-06-20-plaintext-versions-change-map-poster.png?v=20260620-build-1.93.0-1280-12pt-r1"
+                poster="./assets/posters/2026-07-01-plaintext-versions-change-map-poster.png?v=20260701-build-1.93.1-1280-12pt-r4"
                 muted
                 loop
                 playsinline
                 controls
                 preload="metadata"
               >
-                <source src="./assets/videos/2026-06-20-plaintext-versions-change-map.mp4?v=20260620-build-1.93.0-1280-12pt-r1" type="video/mp4" />
-                <source src="./assets/videos/2026-06-20-plaintext-versions-change-map.webm?v=20260620-build-1.93.0-1280-12pt-r1" type="video/webm" />
+                <source src="./assets/videos/2026-07-01-plaintext-versions-change-map.mp4?v=20260701-build-1.93.1-1280-12pt-r4" type="video/mp4" />
+                <source src="./assets/videos/2026-07-01-plaintext-versions-change-map.webm?v=20260701-build-1.93.1-1280-12pt-r4" type="video/webm" />
                 Your browser cannot play this Gatherfield walkthrough video. Download the MP4 from
-                <a href="./assets/videos/2026-06-20-plaintext-versions-change-map.mp4?v=20260620-build-1.93.0-1280-12pt-r1">this link</a>.
+                <a href="./assets/videos/2026-07-01-plaintext-versions-change-map.mp4?v=20260701-build-1.93.1-1280-12pt-r4">this link</a>.
               </video>
             </div>
             <figcaption>Choose a saved draft; the map redraws from that draft's links.</figcaption>
           </figure>
         </article>
 
-        <article id="history" class="story-step">
+        <article id="history" class="story-step story-split media-left">
           <div class="story-copy">
-            <p class="story-index">04 / Draft history</p>
+            <p class="story-index">03 / Version history</p>
             <h2>Revise freely.</h2>
             <p>
               Follow an idea too far, then pull back. History restores an earlier draft while the note remains a normal text file.
@@ -165,106 +140,86 @@
           <figure class="story-media" aria-label="Gatherfield recoverable history video">
             <div class="video-frame is-ready">
               <video
-                poster="./assets/posters/2026-06-20-local-files-recoverable-history-poster.png?v=20260620-build-1.93.0-1280-12pt-r1"
+                poster="./assets/posters/2026-07-01-local-files-recoverable-history-poster.png?v=20260701-build-1.93.1-1280-12pt-r4"
                 muted
                 loop
                 playsinline
                 controls
                 preload="metadata"
               >
-                <source src="./assets/videos/2026-06-20-local-files-recoverable-history.mp4?v=20260620-build-1.93.0-1280-12pt-r1" type="video/mp4" />
-                <source src="./assets/videos/2026-06-20-local-files-recoverable-history.webm?v=20260620-build-1.93.0-1280-12pt-r1" type="video/webm" />
+                <source src="./assets/videos/2026-07-01-local-files-recoverable-history.mp4?v=20260701-build-1.93.1-1280-12pt-r4" type="video/mp4" />
+                <source src="./assets/videos/2026-07-01-local-files-recoverable-history.webm?v=20260701-build-1.93.1-1280-12pt-r4" type="video/webm" />
                 Your browser cannot play this Gatherfield walkthrough video. Download the MP4 from
-                <a href="./assets/videos/2026-06-20-local-files-recoverable-history.mp4?v=20260620-build-1.93.0-1280-12pt-r1">this link</a>.
+                <a href="./assets/videos/2026-07-01-local-files-recoverable-history.mp4?v=20260701-build-1.93.1-1280-12pt-r4">this link</a>.
               </video>
             </div>
             <figcaption>Restore an earlier draft without turning the note into an app-only file.</figcaption>
           </figure>
         </article>
 
-        <article id="annotations" class="story-step">
+        <div class="story-beat">
+          <p class="story-beat-lead">Your notes are plaintext files on disk.</p>
+          <p>Everything in these clips is ordinary Markdown. Open it in any editor, sync it however you like, and keep it long after Gatherfield. The map, drafts, and history are added on top &mdash; never locked in.</p>
+        </div>
+
+        <div class="chapter-head"><span>Shape the text</span></div>
+
+        <article id="annotations" class="story-step story-split media-right">
           <div class="story-copy">
-            <p class="story-index">05 / Annotations</p>
+            <p class="story-index">04 / Annotations</p>
             <h2>Leave comments beside the text, not inside it.</h2>
             <p>
-              Highlight a line, leave a comment, and come back to it later. The annotation stays attached to the passage while the underlying text stays clean.
+              Highlight a line or leave a comment. The annotation stays attached to the passage while the underlying text stays clean.
             </p>
           </div>
           <figure class="story-media" aria-label="Gatherfield comments and highlights video">
             <div class="video-frame is-ready">
               <video
-                poster="./assets/posters/2026-06-20-comments-and-highlights-poster.png?v=20260620-build-1.93.0-1280-12pt-r1"
+                poster="./assets/posters/2026-07-01-comments-and-highlights-poster.png?v=20260701-build-1.93.1-1280-12pt-r4"
                 muted
                 loop
                 playsinline
                 controls
                 preload="metadata"
               >
-                <source src="./assets/videos/2026-06-20-comments-and-highlights.mp4?v=20260620-build-1.93.0-1280-12pt-r1" type="video/mp4" />
-                <source src="./assets/videos/2026-06-20-comments-and-highlights.webm?v=20260620-build-1.93.0-1280-12pt-r1" type="video/webm" />
+                <source src="./assets/videos/2026-07-01-comments-and-highlights.mp4?v=20260701-build-1.93.1-1280-12pt-r4" type="video/mp4" />
+                <source src="./assets/videos/2026-07-01-comments-and-highlights.webm?v=20260701-build-1.93.1-1280-12pt-r4" type="video/webm" />
                 Your browser cannot play this Gatherfield walkthrough video. Download the MP4 from
-                <a href="./assets/videos/2026-06-20-comments-and-highlights.mp4?v=20260620-build-1.93.0-1280-12pt-r1">this link</a>.
+                <a href="./assets/videos/2026-07-01-comments-and-highlights.mp4?v=20260701-build-1.93.1-1280-12pt-r4">this link</a>.
               </video>
             </div>
             <figcaption>Highlights and comments stay attached to passages without changing the text.</figcaption>
           </figure>
         </article>
 
-        <article id="draft" class="story-step">
+        <article id="draft" class="story-step story-split media-left story-step-final">
           <div class="story-copy">
-            <p class="story-index">06 / Read-through</p>
+            <p class="story-index">05 / Read-through</p>
             <h2>Keep a read-through current without copy-paste.</h2>
             <p>
-              Write and revise in separate linked notes. Draft follows the flow, so moved, added, or changed notes update the read-through.
+              Write chapters as separate linked notes. Each link you add pulls its chapter into the read-through — one growing document, stitched from the flow.
             </p>
           </div>
-          <figure class="story-media" aria-label="Gatherfield Draft read-through video">
+          <figure class="story-media" aria-label="Gatherfield read-through video">
             <div class="video-frame is-ready">
               <video
-                poster="./assets/posters/2026-06-20-draft-read-through-from-linked-notes-poster.png?v=20260620-build-1.93.0-1280-12pt-r1"
+                poster="./assets/posters/2026-07-01-draft-read-through-from-linked-notes-poster.png?v=20260701-build-1.93.1-1280-12pt-r6"
                 muted
                 loop
                 playsinline
                 controls
                 preload="metadata"
               >
-                <source src="./assets/videos/2026-06-20-draft-read-through-from-linked-notes.mp4?v=20260620-build-1.93.0-1280-12pt-r1" type="video/mp4" />
-                <source src="./assets/videos/2026-06-20-draft-read-through-from-linked-notes.webm?v=20260620-build-1.93.0-1280-12pt-r1" type="video/webm" />
+                <source src="./assets/videos/2026-07-01-draft-read-through-from-linked-notes.mp4?v=20260701-build-1.93.1-1280-12pt-r6" type="video/mp4" />
+                <source src="./assets/videos/2026-07-01-draft-read-through-from-linked-notes.webm?v=20260701-build-1.93.1-1280-12pt-r6" type="video/webm" />
                 Your browser cannot play this Gatherfield walkthrough video. Download the MP4 from
-                <a href="./assets/videos/2026-06-20-draft-read-through-from-linked-notes.mp4?v=20260620-build-1.93.0-1280-12pt-r1">this link</a>.
+                <a href="./assets/videos/2026-07-01-draft-read-through-from-linked-notes.mp4?v=20260701-build-1.93.1-1280-12pt-r6">this link</a>.
               </video>
             </div>
-            <figcaption>Change the notes behind the flow; Draft keeps the read-through in sync.</figcaption>
+            <figcaption>Start from one note; every added link grows the read-through.</figcaption>
           </figure>
         </article>
 
-        <article id="split-combine" class="story-step story-step-final">
-          <div class="story-copy">
-            <p class="story-index">07 / Passages and notes</p>
-            <h2>Change a note's scale as the work changes.</h2>
-            <p>
-              Start with the shape that works now. If a passage needs room, make it a note; if a linked note belongs inline, bring it back into the text.
-            </p>
-          </div>
-          <figure class="story-media" aria-label="Gatherfield split and combine notes video">
-            <div class="video-frame is-ready">
-              <video
-                poster="./assets/posters/2026-06-20-split-and-combine-notes-poster.png?v=20260620-build-1.93.0-1280-12pt-r1"
-                muted
-                loop
-                playsinline
-                controls
-                preload="metadata"
-              >
-                <source src="./assets/videos/2026-06-20-split-and-combine-notes.mp4?v=20260620-build-1.93.0-1280-12pt-r1" type="video/mp4" />
-                <source src="./assets/videos/2026-06-20-split-and-combine-notes.webm?v=20260620-build-1.93.0-1280-12pt-r1" type="video/webm" />
-                Your browser cannot play this Gatherfield walkthrough video. Download the MP4 from
-                <a href="./assets/videos/2026-06-20-split-and-combine-notes.mp4?v=20260620-build-1.93.0-1280-12pt-r1">this link</a>.
-              </video>
-            </div>
-            <figcaption>A note can grow, split, or fold back together without rebuilding the map.</figcaption>
-          </figure>
-        </article>
       </section>
 
       <section class="supporting-features" aria-labelledby="supporting-title">
@@ -284,7 +239,7 @@
           <article>
             <span>Dockable panes</span>
             <h3>Set up the room for the writing task.</h3>
-            <p>Put the draft, map, files, and research where the current pass needs them.</p>
+            <p>Put the read-through, map, files, and research where the current pass needs them.</p>
           </article>
           <article>
             <span>Optional metadata</span>
@@ -295,6 +250,16 @@
             <span>Sources</span>
             <h3>Attach references without adding them to the map.</h3>
             <p>Keep citations, source notes, and research close to the draft while the visual map stays focused on the notes you are connecting.</p>
+          </article>
+          <article id="board">
+            <span>Arranged map</span>
+            <h3>Take over when auto layout is not what you meant.</h3>
+            <p>Drag notes into a readable order and keep that arrangement with the note, instead of letting auto layout decide.</p>
+          </article>
+          <article id="split-combine">
+            <span>Passages &amp; notes</span>
+            <h3>Change a note's scale as the work changes.</h3>
+            <p>Promote a passage into its own note, or fold a linked note back inline &mdash; without rebuilding the map.</p>
           </article>
         </div>
       </section>
