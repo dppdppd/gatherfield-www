@@ -273,3 +273,19 @@ function initGatherfieldTumbleGraph() {
 }
 
 initGatherfieldTumbleGraph();
+
+
+// Fill the download section's version label with the actual latest release tag
+// (latest-download-links): the hrefs are evergreen /releases/latest/download/
+// URLs, so only this display text needs the API. Failure-silent — the static
+// "latest beta" placeholder stands if offline/rate-limited.
+(function () {
+  var el = document.querySelector("[data-latest-version]");
+  if (!el) return;
+  fetch("https://api.github.com/repos/dppdppd/gatherfield/releases/latest")
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (rel) {
+      if (rel && rel.tag_name) el.textContent = rel.tag_name.replace(/^v/, "v");
+    })
+    .catch(function () {});
+})();
