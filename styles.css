@@ -1624,3 +1624,27 @@ footer {
     font-size: 34px;
   }
 }
+
+/* Two-platform download buttons (linux-release 2026-07-02). */
+.download-buttons {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.download-button-secondary {
+  background: transparent;
+  border: 1px solid rgba(255, 254, 251, 0.4);
+}
+
+.download-button-secondary:hover {
+  box-shadow: 0 10px 30px rgba(255, 254, 251, 0.14);
+}
+
+.download-note code {
+  background: rgba(255, 254, 251, 0.12);
+  border-radius: 4px;
+  font-family: var(--mono);
+  padding: 1px 6px;
+}

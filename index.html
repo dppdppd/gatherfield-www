@@ -23,7 +23,7 @@
     <meta name="twitter:title" content="Gatherfield - Visual workspace for connected notes" />
     <meta name="twitter:description" content="Keep notes, drafts, sources, and outlines tied to a visual map that comes from plain text." />
     <meta name="twitter:image" content="https://gatherfield.app/gatherfield-og-image.png" />
-    <link rel="stylesheet" href="./styles.css?v=20260702-download-section" />
+    <link rel="stylesheet" href="./styles.css?v=20260702-linux-links" />
     <link rel="icon" href="./assets/brand/gatherfield-icon-inverted.svg?v=20260617-icon-dark-zoomout20-centered" />
   </head>
   <body>
@@ -274,12 +274,20 @@
           </p>
         </div>
         <div class="download-actions">
-          <a
-            class="download-button"
-            href="https://github.com/dppdppd/gatherfield/releases/download/v1.93.1-beta/gatherfield-1.93.1-beta-windows-x86_64.exe"
-          >Download for Windows</a>
+          <div class="download-buttons">
+            <a
+              class="download-button"
+              href="https://github.com/dppdppd/gatherfield/releases/download/v1.93.1-beta/gatherfield-1.93.1-beta-windows-x86_64.exe"
+            >Download for Windows</a>
+            <a
+              class="download-button download-button-secondary"
+              href="https://github.com/dppdppd/gatherfield/releases/download/v1.93.1-beta/gatherfield-1.93.1-beta-linux-x86_64.AppImage"
+            >Download for Linux</a>
+          </div>
           <p class="download-meta">
-            v1.93.1-beta &middot; portable x64 .exe &middot; ~15&nbsp;MB &middot;
+            v1.93.1-beta &middot; Windows: portable x64 .exe &middot; Linux: AppImage, also
+            <a href="https://github.com/dppdppd/gatherfield/releases/download/v1.93.1-beta/gatherfield-1.93.1-beta-linux-x86_64.deb">.deb</a> /
+            <a href="https://github.com/dppdppd/gatherfield/releases/download/v1.93.1-beta/gatherfield-1.93.1-beta-linux-x86_64.rpm">.rpm</a> &middot;
             <a href="https://github.com/dppdppd/gatherfield/releases">all releases &amp; checksums</a>
           </p>
         </div>
@@ -288,7 +296,7 @@
           <li><strong>If Windows SmartScreen appears,</strong> choose &ldquo;More info&rdquo; &rarr; &ldquo;Run anyway&rdquo;. Beta builds are not code-signed yet; you can verify the file against the release&rsquo;s SHA256SUMS.</li>
           <li><strong>Open a folder.</strong> Point Gatherfield at any folder of Markdown notes &mdash; or an empty one &mdash; and start linking.</li>
         </ol>
-        <p class="download-note">Linux and macOS builds are on the way &mdash; watch the <a href="https://github.com/dppdppd/gatherfield/releases">releases page</a>.</p>
+        <p class="download-note">Linux: make the AppImage executable (<code>chmod +x</code>) and run it. The macOS build is on the way &mdash; watch the <a href="https://github.com/dppdppd/gatherfield/releases">releases page</a>.</p>
       </section>
     </main>
 
