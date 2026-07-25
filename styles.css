@@ -1177,6 +1177,111 @@ footer {
   width: 34px;
 }
 
+/* Features at a glance — a compact anchor-link grid between the hero and the
+   storyline: nine cards, each jumping to the section that shows the feature. */
+.glance {
+  /* Solid ground + stacking context: the hero's tumble-graph decoration bleeds
+     down here and would otherwise show through the transparent list rows. */
+  background: var(--bg);
+  margin: 0 auto;
+  max-width: 1120px;
+  padding: clamp(28px, 4vw, 48px) 24px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.glance-title {
+  margin: 0 0 22px;
+  text-align: center;
+}
+
+.glance-title span {
+  color: var(--muted);
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.glance-title span::before,
+.glance-title span::after {
+  background: var(--line-strong);
+  content: "";
+  display: inline-block;
+  height: 1px;
+  margin: 0 14px;
+  vertical-align: middle;
+  width: 34px;
+}
+
+.glance-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 0 auto;
+  max-width: 640px;
+}
+
+.glance-grid a {
+  align-items: baseline;
+  color: inherit;
+  /* Fixed label column so every description starts at the same x (sized to the
+     longest label, "comments & highlights", at the 11px mono size). */
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 145px minmax(0, 1fr);
+  min-width: 0;
+  padding: 5px 0 5px 20px;
+  position: relative;
+  text-decoration: none;
+}
+
+.glance-grid a::before {
+  background: var(--route);
+  border-radius: 50%;
+  content: "";
+  height: 5px;
+  left: 4px;
+  position: absolute;
+  top: 0.72em;
+  width: 5px;
+}
+
+.glance-grid a:hover p,
+.glance-grid a:focus-visible p {
+  color: var(--ink);
+}
+
+.glance-grid a:focus-visible {
+  outline: 2px solid var(--route);
+  outline-offset: 1px;
+}
+
+.glance-grid span {
+  color: var(--route);
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.glance-grid p {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.42;
+  margin: 0;
+  min-width: 0;
+}
+
+@media (max-width: 760px) {
+  .glance {
+    padding: 26px 18px 0;
+  }
+}
+
 /* Lead feature is the dominant beat: tinted band, larger heading, wider media */
 .story-feature {
   background: var(--route-faint);
@@ -1194,14 +1299,22 @@ footer {
   max-width: min(1200px, calc(100vw - 48px));
 }
 
-/* Split sections alternate copy/media sides to vary the rhythm */
+/* Split sections alternate copy/media sides to vary the rhythm. The media column
+   takes 5/8 of the row (25% wider than the old half-and-half split — user
+   2026-07-25: videos 2+ read too small); the copy column keeps its measure. The
+   template is per-variant because media-left reorders the media into the FIRST
+   grid column. */
 .story-split {
   align-items: center;
   column-gap: clamp(32px, 5vw, 72px);
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 3fr) minmax(0, 5fr);
   margin: 0 auto;
   max-width: 1180px;
+}
+
+.story-split.media-left {
+  grid-template-columns: minmax(0, 5fr) minmax(0, 3fr);
 }
 
 .story-split .story-copy {
@@ -1287,7 +1400,8 @@ footer {
 
 /* Collapse split sections to a single stacked column on narrow screens */
 @media (max-width: 900px) {
-  .story-split {
+  .story-split,
+  .story-split.media-left {
     grid-template-columns: 1fr;
     row-gap: 28px;
   }

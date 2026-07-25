@@ -23,7 +23,7 @@
     <meta name="twitter:title" content="Gatherfield - Visual workspace for connected notes" />
     <meta name="twitter:description" content="Keep notes, drafts, sources, and outlines tied to a visual map that comes from plain text." />
     <meta name="twitter:image" content="https://gatherfield.app/gatherfield-og-image.png" />
-    <link rel="stylesheet" href="./styles.css?v=20260702-linux-links" />
+    <link rel="stylesheet" href="./styles.css?v=20260725-glance" />
     <link rel="icon" href="./assets/brand/gatherfield-icon-inverted.svg?v=20260617-icon-dark-zoomout20-centered" />
   </head>
   <body>
@@ -59,6 +59,48 @@
             Gatherfield is a Markdown workspace for writing that spreads across notes, drafts, research, sources, outlines, and revisions. Keep the text in plain files, follow threads without losing your place, and see how the pieces relate as a map.
           </p>
         </div>
+      </section>
+
+      <section id="glance" class="glance" aria-labelledby="glance-title">
+        <h2 id="glance-title" class="glance-title"><span>Features at a glance</span></h2>
+        <nav class="glance-grid" aria-label="Jump to a feature">
+          <a href="#plain-text">
+            <span>Visual map</span>
+            <p>Links in your text become a living map.</p>
+          </a>
+          <a href="#versions">
+            <span>Alternate drafts</span>
+            <p>Branch a note; the map follows the draft.</p>
+          </a>
+          <a href="#history">
+            <span>Version history</span>
+            <p>Restore any earlier draft, note by note.</p>
+          </a>
+          <a href="#annotations">
+            <span>Comments &amp; highlights</span>
+            <p>Annotate beside the text, never inside it.</p>
+          </a>
+          <a href="#draft">
+            <span>Read-through</span>
+            <p>Read linked notes as one continuous draft.</p>
+          </a>
+          <a href="#live-snippets">
+            <span>Live snippets</span>
+            <p>Sync one value&mdash;or a formula&mdash;across every note.</p>
+          </a>
+          <a href="#sources">
+            <span>Sources</span>
+            <p>Keep references near the draft, off the map.</p>
+          </a>
+          <a href="#panes">
+            <span>Dockable panes</span>
+            <p>Arrange the room around the writing task.</p>
+          </a>
+          <a href="#download">
+            <span>Plain Markdown files</span>
+            <p>Keep ordinary files that open in any editor.</p>
+          </a>
+        </nav>
       </section>
 
       <section id="story" class="storyline" aria-labelledby="story-title">
@@ -160,7 +202,7 @@
 
         <div class="story-beat">
           <p class="story-beat-lead">Your notes are plaintext files on disk.</p>
-          <p>Everything in these clips is ordinary Markdown. Open it in any editor, sync it however you like, and keep it long after Gatherfield. The map, drafts, and history are added on top &mdash; never locked in.</p>
+          <p>Everything in these clips is ordinary Markdown. Open it in any editor, sync it however you like, and keep it long after Gatherfield. The map, drafts, and history are added on top&mdash;never locked in.</p>
         </div>
 
         <div class="chapter-head"><span>Shape the text</span></div>
@@ -198,7 +240,7 @@
             <p class="story-index">05 / Read-through</p>
             <h2>Keep a read-through current without copy-paste.</h2>
             <p>
-              Write chapters as separate linked notes. Each link you add pulls its chapter into the read-through — one growing document, stitched from the flow.
+              Write chapters as separate linked notes. Each link you add pulls its chapter into the read-through—one growing document, stitched from the flow.
             </p>
           </div>
           <figure class="story-media" aria-label="Gatherfield read-through video">
@@ -226,23 +268,23 @@
             <p class="story-index">06 / Live snippets</p>
             <h2>One value, in sync across every note.</h2>
             <p>
-              Wrap a recurring value in <code>{name:value}</code> and it becomes a live snippet. Type it again anywhere and it autocompletes to the value you set; change it once and every note updates in a single reviewed step &mdash; while the files stay plain text you can read in any editor.
+              Wrap a recurring value in <code>{name:value}</code> and it becomes a live snippet. Type it again anywhere and it autocompletes to the value you set; change it once and every note updates in a single reviewed step&mdash;while the files stay plain text you can read in any editor.
             </p>
           </div>
           <figure class="story-media" aria-label="Gatherfield live snippets video">
             <div class="video-frame is-ready">
               <video
-                poster="./assets/posters/2026-07-25-live-snippets-poster.png?v=20260725-1.104.0-r1"
+                poster="./assets/posters/2026-07-25-live-snippets-poster.png?v=20260725-1.104.1-r4"
                 muted
                 loop
                 playsinline
                 controls
                 preload="metadata"
               >
-                <source src="./assets/videos/2026-07-25-live-snippets.mp4?v=20260725-1.104.0-r1" type="video/mp4" />
-                <source src="./assets/videos/2026-07-25-live-snippets.webm?v=20260725-1.104.0-r1" type="video/webm" />
+                <source src="./assets/videos/2026-07-25-live-snippets.mp4?v=20260725-1.104.1-r4" type="video/mp4" />
+                <source src="./assets/videos/2026-07-25-live-snippets.webm?v=20260725-1.104.1-r4" type="video/webm" />
                 Your browser cannot play this Gatherfield walkthrough video. Download the MP4 from
-                <a href="./assets/videos/2026-07-25-live-snippets.mp4?v=20260725-1.104.0-r1">this link</a>.
+                <a href="./assets/videos/2026-07-25-live-snippets.mp4?v=20260725-1.104.1-r4">this link</a>.
               </video>
             </div>
             <figcaption>Redefine a snippet's value in one note; confirm, and every <code>{name:&hellip;}</code> across your notes updates as one undoable step.</figcaption>
@@ -265,7 +307,7 @@
             <h3>The page, map, files, and references stay together.</h3>
             <p>Move through a project without mentally reconciling separate outlines, source lists, and diagrams.</p>
           </article>
-          <article>
+          <article id="panes">
             <span>Dockable panes</span>
             <h3>Set up the room for the writing task.</h3>
             <p>Put the read-through, map, files, and research where the current pass needs them.</p>
@@ -288,7 +330,7 @@
           <article id="split-combine">
             <span>Passages &amp; notes</span>
             <h3>Change a note's scale as the work changes.</h3>
-            <p>Promote a passage into its own note, or fold a linked note back inline &mdash; without rebuilding the map.</p>
+            <p>Promote a passage into its own note, or fold a linked note back inline&mdash;without rebuilding the map.</p>
           </article>
         </div>
       </section>
@@ -298,7 +340,7 @@
           <p class="eyebrow">Beta</p>
           <h2 id="download-title">Take Gatherfield for a spin.</h2>
           <p>
-            The desktop app is one portable file &mdash; no installer, no account. Your notes are ordinary Markdown files in a folder you choose, and they stay yours.
+            The desktop app is one portable file&mdash;no installer, no account. Your notes are ordinary Markdown files in a folder you choose, and they stay yours.
           </p>
         </div>
         <div class="download-actions">
@@ -320,11 +362,11 @@
           </p>
         </div>
         <ol class="download-steps">
-          <li><strong>Download and run.</strong> It is a portable app &mdash; no install step; keep it anywhere.</li>
+          <li><strong>Download and run.</strong> It is a portable app&mdash;no install step; keep it anywhere.</li>
           <li><strong>If Windows SmartScreen appears,</strong> choose &ldquo;More info&rdquo; &rarr; &ldquo;Run anyway&rdquo;. Beta builds are not code-signed yet; you can verify the file against the release&rsquo;s SHA256SUMS.</li>
-          <li><strong>Open a folder.</strong> Point Gatherfield at any folder of Markdown notes &mdash; or an empty one &mdash; and start linking.</li>
+          <li><strong>Open a folder.</strong> Point Gatherfield at any folder of Markdown notes&mdash;or an empty one&mdash;and start linking.</li>
         </ol>
-        <p class="download-note">Linux: make the AppImage executable (<code>chmod +x</code>) and run it. The macOS build is on the way &mdash; watch the <a href="https://github.com/dppdppd/gatherfield/releases">releases page</a>. Hit a problem? <a href="https://github.com/dppdppd/gatherfield/issues">Report an issue</a>.</p>
+        <p class="download-note">Linux: make the AppImage executable (<code>chmod +x</code>) and run it. The macOS build is on the way&mdash;watch the <a href="https://github.com/dppdppd/gatherfield/releases">releases page</a>. Hit a problem? <a href="https://github.com/dppdppd/gatherfield/issues">Report an issue</a>.</p>
       </section>
     </main>
 
