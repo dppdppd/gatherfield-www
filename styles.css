@@ -1121,15 +1121,33 @@ footer {
   text-transform: uppercase;
 }
 
+/* ONE width rule governs every homepage video, at every breakpoint.
+   1280px is not a taste number: the videos are captured at exactly 1280x720 per
+   screen_recordings/docs/video-production-guidelines.md, which pins "record only the app frame at
+   1280x720" with a 12pt app font chosen so the app text reads at homepage size. Displaying below
+   1280 shrinks that text below the size it was designed for; displaying above 1280 upscales a
+   screen recording and softens it. So the cap IS the capture width, and the viewport term only
+   takes over once the window is too narrow to hold it.
+   Before 2026-08-06 this was min(1120px, 100vw - 80px) plus per-breakpoint caps of 920/1200 in the
+   @media blocks below; the split sections rendered at 663px, 52% of native. */
 .story-media {
   margin: 0 auto;
-  max-width: min(1120px, calc(100vw - 80px));
+  max-width: min(1280px, calc(100vw - 48px));
 }
 
+/* The hairline is a shadow RING, not a border, so that 1280 means 1280.
+   .video-frame is border-box and aspect-ratio applies to the border box, so a 1px border made the
+   content box 1278x718 and the browser resampled every pixel of the 1280x720 source to fit it.
+   A 0-offset 0-blur 1px box-shadow draws the identical hairline OUTSIDE the content box, so the
+   video decodes 1:1. Measured: video element 1278x718 before, 1280x720 after.
+   Scoped to .story-media on purpose: the shared .video-frame rule (L204) still carries the real
+   border for any frame that is not a homepage story video. */
 .story-media .video-frame {
-  border: 1px solid var(--line-strong);
+  border: 0;
   border-radius: 8px;
-  box-shadow: var(--shadow);
+  box-shadow:
+    0 0 0 1px var(--line-strong),
+    var(--shadow);
   background: #272320;
   overflow: hidden;
 }
@@ -1295,51 +1313,47 @@ footer {
   font-size: 66px;
 }
 
-.story-feature .story-media {
-  max-width: min(1200px, calc(100vw - 48px));
-}
+/* .story-feature needs no media override: it inherits the shared .story-media cap. */
 
-/* Split sections alternate copy/media sides to vary the rhythm. The media column
-   takes 5/8 of the row (25% wider than the old half-and-half split — user
-   2026-07-25: videos 2+ read too small); the copy column keeps its measure. The
-   template is per-variant because media-left reorders the media into the FIRST
-   grid column. */
+/* These sections USED to be a two-column grid alternating .media-left / .media-right to vary the
+   page rhythm. They are now stacked like .story-feature, because side-by-side and full-size are
+   mutually exclusive here and full-size won.
+   The arithmetic: a native 1280px video plus the 460px copy column plus the 72px gutter needs
+   1812px of viewport. Below that the grid has to shrink the video, and it was shrinking it a long
+   way: 663px, 52% of native, which halved app text that had been sized for the homepage. The
+   2026-07-25 pass tried to fix this within the grid by going 4fr/4fr -> 3fr/5fr; that bought 25%
+   and left the video at half size, so the constraint is the two-column layout itself, not the ratio.
+   Rhythm now comes from what does not depend on video width: the odd/even band backgrounds
+   (.story-step:nth-of-type), the .chapter-head dividers, and the inverted .story-beat sections.
+   The .media-left / .media-right classes in index.html are inert and kept only so the markup still
+   records the intended alternation if a wider layout is ever revisited. */
 .story-split {
-  align-items: center;
-  column-gap: clamp(32px, 5vw, 72px);
   display: grid;
-  grid-template-columns: minmax(0, 3fr) minmax(0, 5fr);
+  grid-template-columns: 1fr;
   margin: 0 auto;
-  max-width: 1180px;
-}
-
-.story-split.media-left {
-  grid-template-columns: minmax(0, 5fr) minmax(0, 3fr);
+  max-width: none;
+  row-gap: 30px;
 }
 
 .story-split .story-copy {
-  margin: 0;
-  max-width: 460px;
-  text-align: left;
+  margin: 0 auto;
+  max-width: 760px;
+  text-align: center;
 }
 
 .story-split .story-copy p {
-  margin: 0;
-  max-width: none;
+  margin: 0 auto;
+  max-width: 640px;
 }
 
-.story-split .story-media {
-  margin: 0;
-  max-width: none;
-}
-
-.story-split .story-media figcaption {
-  margin-left: 0;
-  text-align: left;
-}
-
-.story-split.media-left .story-media {
-  order: -1;
+/* PRE-EXISTING, not introduced by the 2026-08-06 video resize: .story-index declares
+   margin: 0 0 18px, but every blanket copy rule that sets margin on a <p> outranks it
+   (".story-intro p, .story-copy p" and ".story-split .story-copy p" are both 0-2-1, the bare
+   .story-index class is 0-1-0), so the computed margin-bottom was 0px and the eyebrow sat flush
+   against its heading in all six sections. Restated at matching specificity and placed after both
+   offenders so source order settles it. */
+.story-copy p.story-index {
+  margin: 0 0 18px;
 }
 
 /* Inverted text-only beat: a hard rhythm break between video chapters */
@@ -1380,9 +1394,9 @@ footer {
     width: 860px;
   }
 
-  .story-media {
-    max-width: min(920px, calc(100vw - 48px));
-  }
+  /* No .story-media cap here. The single min(1280px, 100vw - 48px) rule already yields
+     1032px at this breakpoint; the old 920px cap only existed to hold the media inside the
+     narrower ceiling this file used before 2026-08-06. */
 
   .story-intro h2,
   .story-copy h2 {
@@ -1392,39 +1406,12 @@ footer {
   .story-feature .story-copy h2 {
     font-size: 52px;
   }
-
-  .story-feature .story-media {
-    max-width: min(920px, calc(100vw - 48px));
-  }
 }
 
-/* Collapse split sections to a single stacked column on narrow screens */
-@media (max-width: 900px) {
-  .story-split,
-  .story-split.media-left {
-    grid-template-columns: 1fr;
-    row-gap: 28px;
-  }
-
-  .story-split .story-copy {
-    margin: 0 auto;
-    max-width: 640px;
-    text-align: center;
-  }
-
-  .story-split .story-copy p {
-    margin: 0 auto;
-    max-width: 640px;
-  }
-
-  .story-split .story-media figcaption {
-    text-align: center;
-  }
-
-  .story-split.media-left .story-media {
-    order: 0;
-  }
-}
+/* The @media (max-width: 900px) block that used to live here collapsed the split sections into a
+   single stacked column. Every declaration in it (grid-template-columns: 1fr, centered copy,
+   centered figcaption, order: 0) is now the unconditional .story-split behavior, so the block was
+   entirely redundant and was removed 2026-08-06. */
 
 @media (max-width: 760px) {
   .hero-linear {
