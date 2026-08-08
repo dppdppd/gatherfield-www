@@ -1324,9 +1324,8 @@ footer {
    2026-07-25 pass tried to fix this within the grid by going 4fr/4fr -> 3fr/5fr; that bought 25%
    and left the video at half size, so the constraint is the two-column layout itself, not the ratio.
    Rhythm now comes from what does not depend on video width: the odd/even band backgrounds
-   (.story-step:nth-of-type), the .chapter-head dividers, and the inverted .story-beat sections.
-   The .media-left / .media-right classes in index.html are inert and kept only so the markup still
-   records the intended alternation if a wider layout is ever revisited. */
+   (.story-step:nth-of-type), the .chapter-head dividers, the inverted .story-beat sections, and
+   the copy block, which still alternates sides (see below). */
 .story-split {
   display: grid;
   grid-template-columns: 1fr;
@@ -1335,15 +1334,52 @@ footer {
   row-gap: 30px;
 }
 
+/* The left/right alternation survives the stacking: the copy block spans the SAME box as the video
+   and hangs off one end of it, mirroring down the page. .media-left / .media-right stay meaningful
+   and keep their authored sequence (R L R L R, so the copy reads L R L R L); they describe where
+   the copy sits rather than which grid column the media took.
+   Specificity note, this is the whole trick: the generic ".story-intro p, .story-copy p" sets
+   "margin: 0 auto" at 0-2-1, so a 0-2-0 selector like ".story-split .story-copy > *" silently
+   loses and the paragraph stays centred while the heading moves, which reads as a bug rather than
+   a layout. Hanging the rules off the .media-* class buys 0-3-0 and wins outright.
+   The eyebrow is display: inline-block, so auto margins are inert on it and text-align is what
+   actually moves it; that is why the alignment flips on .story-copy itself and not just on the
+   children. */
 .story-split .story-copy {
-  margin: 0 auto;
+  justify-self: center;
+  margin: 0 0 4px;
+  max-width: none;
+  width: min(1280px, calc(100vw - 48px));
+}
+
+.story-split .story-copy > * {
   max-width: 760px;
-  text-align: center;
 }
 
 .story-split .story-copy p {
-  margin: 0 auto;
   max-width: 640px;
+}
+
+.story-split .story-copy p.story-index {
+  max-width: none;
+}
+
+.story-split.media-right .story-copy {
+  text-align: left;
+}
+
+.story-split.media-right .story-copy > * {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.story-split.media-left .story-copy {
+  text-align: right;
+}
+
+.story-split.media-left .story-copy > * {
+  margin-left: auto;
+  margin-right: 0;
 }
 
 /* PRE-EXISTING, not introduced by the 2026-08-06 video resize: .story-index declares
@@ -1409,9 +1445,25 @@ footer {
 }
 
 /* The @media (max-width: 900px) block that used to live here collapsed the split sections into a
-   single stacked column. Every declaration in it (grid-template-columns: 1fr, centered copy,
-   centered figcaption, order: 0) is now the unconditional .story-split behavior, so the block was
-   entirely redundant and was removed 2026-08-06. */
+   single stacked column; that is now the unconditional .story-split behavior, so those
+   declarations were dropped 2026-08-06. What the breakpoint still has to do is un-hang the copy.
+   The offset only reads as deliberate while there is room for it: the paragraph measure is 640px,
+   so the visible offset is mediaWidth - 640, which is 392px at a 1080 viewport but only 84px at
+   760. At that size it stops looking like a layout and starts looking like a stray indent, so the
+   copy re-centres. Must stay AFTER the .media-left / .media-right rules: same 0-3-0 specificity,
+   so source order is what settles it. */
+@media (max-width: 900px) {
+  .story-split.media-left .story-copy,
+  .story-split.media-right .story-copy {
+    text-align: center;
+  }
+
+  .story-split.media-left .story-copy > *,
+  .story-split.media-right .story-copy > * {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 
 @media (max-width: 760px) {
   .hero-linear {
